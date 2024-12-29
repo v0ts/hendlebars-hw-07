@@ -1,10 +1,12 @@
 {
   "name": "hendlebars-hw-07",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1", 
-    "dev": "npx parcel src/index.html"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -16,9 +18,10 @@
   "bugs": {
     "url": "https://github.com/v0ts/hendlebars-hw-07/issues"
   },
-  "homepage": "https://github.com/v0ts/hendlebars-hw-07#readme",
+  "homepage": "https://v0ts.github.io/hendlebars-test/",
   "description": "",
   "dependencies": {
+    "gh-pages": "^6.2.0",
     "handlebars": "^4.7.8",
     "parcel": "^2.13.3",
     "parcel-transformer-hbs": "^1.0.4"
